@@ -21,6 +21,11 @@
 		<link rel="stylesheet" href="lib/css/zenburn.css">
         <link rel="stylesheet" href="css/app.css">
 
+        <!-- Ionic CSS -->
+        <link rel="stylesheet" href="bower_components/ionic/release/css/ionic.min.css"/>
+
+        <script src="bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+
 		<!-- If the query includes 'print-pdf', include the PDF print sheet -->
 		<script>
 			if( window.location.search.match( /print-pdf/gi ) ) {
@@ -32,7 +37,7 @@
 			}
 		</script>
 
-        <script src="lib/js/angular.js"></script>
+        <!--script src="lib/js/angular.js"></script-->
         <script src="js/app.js"></script>
 
 		<!--[if lt IE 9]>
@@ -835,7 +840,7 @@ angular.module('MyModule', ['ui.grid'])
 
                 <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="50% 100%">
                     <h3>What is it?</h3>
-                    <p>Free and open source, <span class="hot-word">Ionic</span> offers a library of mobile-optimized HTML, CSS and JS components, gestures, and tools for building highly interactive apps. Built with Sass and optimized for AngularJS.</p>
+                    <p>Free and open source, <span class="hot-word">Ionic</span> offers a library of mobile-optimized HTML, CSS and JS components, gestures, and tools for building highly interactive <span class="hot-word">native/hybrid</span> apps. Built with Sass and optimized for AngularJS.</p>
                 </section>
 
                 <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="50% 100%">
@@ -850,12 +855,13 @@ angular.module('MyModule', ['ui.grid'])
 
                 <section>
                     <h3>External features</h3>
+                    <p>The Ionic team is developing a set of useful services all around the platform:</p>
                     <ul>
-                        <li class="fragment">Ionic Creator</li>
-                        <li class="fragment">Ionic Push</li>
-                        <li class="fragment">Ionic Learn</li>
-                        <li class="fragment">Ionic View</li>
-                        <li class="fragment">Ionic.io</li>
+                        <li class="fragment"><a href="https://creator.ionic.io/">Ionic Creator</a>: a handy web UI designer</li>
+                        <li class="fragment"><a href="https://apps.ionic.io/landing/push">Ionic Push</a>: a set of APIs for sending Push Notifications to every platform</li>
+                        <li class="fragment"><a href="http://learn.ionicframework.com/">Ionic Learn</a>: videos, tutorials, and formulas built and maintained directly by the core team</li>
+                        <li class="fragment"><a href="http://view.ionic.io/">Ionic View</a>: test and share your applications without ever going through the App Store</li>
+                        <li class="fragment"><a href="https://apps.ionic.io/">Ionic.io</a>: a web platform that contains all of these services</li>
                     </ul>
                 </section>
             </section>
@@ -867,18 +873,129 @@ angular.module('MyModule', ['ui.grid'])
 
                 <section>
                     <h3>Buttons</h3>
-                </section>
+                    <div>
+                        <div class="ionic-container-example">
+                            <pre>
+                                <code data-trim class="code-block">
+<button class="button button-block button-stable">
+    button-stable
+</button>
 
-                <section>
-                    <h3>Buttons - Example</h3>
+<button class="button button-block button-positive">
+    button-positive
+</button>
+
+<button class="button button-block button-calm">
+    button-calm
+</button>
+
+<button class="button button-block button-balanced">
+    button-balanced
+</button>
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="ionic-container-live">
+                            <img src="images/iphone.png" class="img-clear iphone-cover"/>
+                            <div class="ionic-buttons-container">
+                                <button class="button button-block button-stable">button-stable</button>
+                                <button class="button button-block button-positive">button-positive</button>
+                                <button class="button button-block button-calm">button-calm</button>
+                                <button class="button button-block button-balanced">button-balanced</button>
+                                <button class="button button-block button-energized">button-energized</button>
+                                <button class="button button-block button-assertive">button-assertive</button>
+                                <button class="button button-block button-royal">button-royal</button>
+                                <button class="button button-block button-dark">button-dark</button>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section>
                     <h3>Lists</h3>
-                </section>
-
-                <section>
-                    <h3>Lists - Example</h3>
+                    <div>
+                        <div class="ionic-container-example">
+                            <pre>
+                                <code data-trim class="code-block">
+<div class="list">
+    <a class="item item-icon-left" href="#">
+        <i class="icon ion-email"></i>
+        Check mail
+    </a>
+    <a class="item item-icon-left item-icon-right" href="#">
+        <i class="icon ion-chatbubble-working"></i>
+        Call Ma
+        <i class="icon ion-ios-telephone-outline"></i>
+    </a>
+    <a class="item item-icon-left" href="#">
+        <i class="icon ion-mic-a"></i>
+        Record album
+        <span class="item-note">
+          Grammy
+        </span>
+    </a>
+</div>
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="ionic-container-live">
+                            <img src="images/iphone.png" class="img-clear iphone-cover"/>
+                            <div class="ionic-buttons-container">
+                                <div class="list">
+                                    <a class="item item-icon-left" href="#">
+                                        <i class="icon ion-email"></i>
+                                        Check mail
+                                    </a>
+                                    <a class="item item-icon-left item-icon-right" href="#">
+                                        <i class="icon ion-chatbubble-working"></i>
+                                        Call Ma
+                                        <i class="icon ion-ios-telephone-outline"></i>
+                                    </a>
+                                    <a class="item item-icon-left" href="#">
+                                        <i class="icon ion-mic-a"></i>
+                                        Record album
+                                        <span class="item-note">
+                                          Grammy
+                                        </span>
+                                    </a>
+                                    <a class="item item-icon-left" href="#">
+                                        <i class="icon ion-person-stalker"></i>
+                                        Friends
+                                        <span class="badge badge-assertive">0</span>
+                                    </a>
+                                    <div class="item item-divider">
+                                        Activities
+                                    </div>
+                                    <a class="item item-icon-left" href="#">
+                                        <i class="icon ion-flask"></i>
+                                        Breaking Bad
+                                        <span class="item-note">
+                                          Blue, yellow, pink
+                                        </span>
+                                    </a>
+                                    <a class="item item-icon-left" href="#">
+                                        <i class="icon ion-music-note"></i>
+                                        Music
+                                        <span class="item-note">
+                                          JT
+                                        </span>
+                                    </a>
+                                    <a class="item item-icon-left" href="#">
+                                        <i class="icon ion-game-controller-b"></i>
+                                        Games
+                                        <span class="item-note">
+                                          Super Mario
+                                        </span>
+                                    </a>
+                                    <a class="item item-icon-left item-icon-right" href="#">
+                                        <i class="icon ion-bag"></i>
+                                        Shopping
+                                        <i class="icon ion-arrow-right-c"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section>
@@ -886,15 +1003,7 @@ angular.module('MyModule', ['ui.grid'])
                 </section>
 
                 <section>
-                    <h3>Cards - Example</h3>
-                </section>
-
-                <section>
                     <h3>Forms</h3>
-                </section>
-
-                <section>
-                    <h3>Forms - Example</h3>
                 </section>
 
                 <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="50% 100%">
