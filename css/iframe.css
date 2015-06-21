@@ -1,0 +1,16 @@
+.ionic-buttons-container {
+    padding: 0 15px !important;
+    padding-top: 55px !important;
+}
+
+.img-clear {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.iphone-cover {
+    position: absolute;
+    height: 640px;
+    width: 100%;
+}
