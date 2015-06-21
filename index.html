@@ -14,7 +14,7 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="css/reveal.min.css">
+        <link rel="stylesheet" href="css/reveal.min.css">
 		<link rel="stylesheet" href="css/theme/default.css" id="theme">
 
 		<!-- For syntax highlighting -->
@@ -1000,10 +1000,107 @@ angular.module('MyModule', ['ui.grid'])
 
                 <section>
                     <h3>Cards</h3>
+                    <div>
+                        <div class="ionic-container-example">
+                            <pre>
+                                <code data-trim class="code-block">
+<div class="list card">
+    <div class="item item-avatar">
+        <img src="../images/mcfly.jpg">
+        <h2>Marty McFly</h2>
+        <p>November 05, 1955</p>
+    </div>
+    <div class="item item-body">
+        <img class="full-image" src="../images/delorean.jpg">
+        <p>
+            This is a "Facebook" styled Card. The header is created from a Thumbnail List item,
+            the content is from a card-body consisting of an image and paragraph text. The footer
+            consists of tabs, icons aligned left, within the card-footer.
+        </p>
+        <p>
+            <a href="#" class="subdued">1 Like</a>
+            <a href="#" class="subdued">5 Comments</a>
+        </p>
+    </div>
+    <div class="item tabs tabs-secondary tabs-icon-left">
+        <a class="tab-item" href="#">
+            <i class="icon ion-thumbsup"></i>
+            Like
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-chatbox"></i>
+            Comment
+        </a>
+        <a class="tab-item" href="#">
+            <i class="icon ion-share"></i>
+            Share
+        </a>
+    </div>
+</div>
+                                </code>
+                            </pre>
+                        </div>
+                        <iframe class="ionic-iframe" src="views/card.html"></iframe>
+                    </div>
                 </section>
 
                 <section>
                     <h3>Forms</h3>
+                    <div>
+                        <div class="ionic-container-example">
+                            <pre>
+                                <code data-trim class="code-block">
+<div class="list">
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">First Name</span>
+        <input type="text" placeholder="John">
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Last Name</span>
+        <input type="text" placeholder="Suhr">
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Email</span>
+        <input type="text" placeholder="john@suhr.com">
+    </label>
+    <label class="item item-input item-stacked-label">
+        <span class="input-label">Age</span>
+        <input type="number" placeholder="27">
+    </label>
+</div>
+<div class="padding">
+    <button class="button button-block button-positive">Create Account</button>
+</div>
+                                </code>
+                            </pre>
+                        </div>
+                        <div class="ionic-container-live">
+                            <img src="images/iphone.png" class="img-clear iphone-cover"/>
+                            <div class="ionic-buttons-container">
+                                <div class="list">
+                                    <label class="item item-input item-stacked-label">
+                                        <span class="input-label">First Name</span>
+                                        <input type="text" placeholder="John">
+                                    </label>
+                                    <label class="item item-input item-stacked-label">
+                                        <span class="input-label">Last Name</span>
+                                        <input type="text" placeholder="Suhr">
+                                    </label>
+                                    <label class="item item-input item-stacked-label">
+                                        <span class="input-label">Email</span>
+                                        <input type="text" placeholder="john@suhr.com">
+                                    </label>
+                                    <label class="item item-input item-stacked-label">
+                                        <span class="input-label">Age</span>
+                                        <input type="number" placeholder="27">
+                                    </label>
+                                </div>
+                                <div class="padding">
+                                    <button class="button button-block button-positive">Create Account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </section>
 
                 <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="50% 100%">
@@ -1029,19 +1126,121 @@ angular.module('MyModule', ['ui.grid'])
                 </section>
 
                 <section>
-                    <h3>Action Sheet</h3>
+                    <h3>Popup</h3>
+                    <div>
+                        <div class="ionic-container-example">
+                            <pre>
+                                <code data-trim class="code-block">
+angular.module('app', ['ionic'])
+    .controller('ctrl', ['$scope', '$ionicPopup', '$timeout', function ($scope, $ionicPopup, $timeout) {
+        $scope.showPopup = function() {
+            $scope.data = {};
+
+            var myPopup = $ionicPopup.show({
+                template: '<input type="password" ng-model="data.wifi">',
+                title: 'Enter Wi-Fi Password',
+                subTitle: 'Please use normal things',
+                scope: $scope,
+                buttons: [
+                    { text: 'Cancel' },
+                    {
+                        text: '<b>Save</b>',
+                        type: 'button-positive',
+                    }
+                ]
+            });
+
+            $scope.showConfirm = function() {
+                var confirmPopup = $ionicPopup.confirm({
+                title: 'Consume Ice Cream',
+                template: 'Are you sure you want to eat this ice cream?'
+            });
+
+            $scope.showAlert = function() {
+                var alertPopup = $ionicPopup.alert({
+                    title: 'Don\'t eat that!',
+                    template: 'It might taste good'
+                });
+            };
+        }]);
+                                </code>
+                            </pre>
+                        </div>
+                        <iframe class="ionic-iframe" src="views/popup.html"></iframe>
+                    </div>
                 </section>
 
                 <section>
-                    <h3>HTML5 Form</h3>
-                </section>
-
-                <section>
-                    <h3>Modal</h3>
-                </section>
-
-                <section>
-                    <h3>Navigation</h3>
+                    <h3>Tabs</h3>
+                    <div>
+                        <div class="ionic-container-example">
+                            <pre>
+                                <code data-trim class="code-block">
+angular.module('app', ['ionic'])
+    .config(function($stateProvider, $urlRouterProvider) {
+        $stateProvider
+            .state('tabs', {
+                url: "/tab",
+                abstract: true,
+                templateUrl: "templates/tabs.html"
+            })
+            .state('tabs.home', {
+                url: "/home",
+                views: {
+                    'home-tab': {
+                        templateUrl: "templates/home.html",
+                        controller: 'HomeTabCtrl'
+                    }
+                }
+            })
+            .state('tabs.facts', {
+                url: "/facts",
+                views: {
+                    'home-tab': {
+                        templateUrl: "templates/facts.html"
+                    }
+                }
+            })
+            .state('tabs.facts2', {
+                url: "/facts2",
+                views: {
+                    'home-tab': {
+                        templateUrl: "templates/facts2.html"
+                    }
+                }
+            })
+            .state('tabs.about', {
+                url: "/about",
+                views: {
+                    'about-tab': {
+                        templateUrl: "templates/about.html"
+                    }
+                }
+            })
+            .state('tabs.navstack', {
+                url: "/navstack",
+                views: {
+                    'about-tab': {
+                        templateUrl: "templates/nav-stack.html"
+                    }
+                }
+            })
+            .state('tabs.contact', {
+                url: "/contact",
+                views: {
+                    'contact-tab': {
+                        templateUrl: "templates/contact.html"
+                    }
+                }
+            });
+            $urlRouterProvider.otherwise("/tab/home");
+        })
+        .controller('HomeTabCtrl', [function () {}]);
+                                </code>
+                            </pre>
+                        </div>
+                        <iframe class="ionic-iframe" src="views/tabs.html"></iframe>
+                    </div>
                 </section>
 
                 <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="50% 100%">
@@ -1063,8 +1262,6 @@ angular.module('MyModule', ['ui.grid'])
                 <section>
                     <h1>Ionic Client</h1>
                 </section>
-
-
 
                 <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="50% 100%">
                     <h3>Getting started</h3>
