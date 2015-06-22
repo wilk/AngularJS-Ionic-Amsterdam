@@ -744,11 +744,6 @@ describe('Users Table', function () {
                 </section>
             </section>
 
-            <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="75% 100%">
-                <h1>Libraries</h1>
-                <img src="images/monster.gif" style="background: transparent; box-shadow: none; border: none;"/>
-            </section>
-
             <section>
                 <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="100% 100%">
                     <h1>Angular-UI</h1>
@@ -1261,19 +1256,110 @@ angular.module('app', ['ionic'])
             <section>
                 <section>
                     <h1>Ionic Client</h1>
+                    <a href="">Link to Ionic-Cli</a>
+                </section>
+
+                <section>
+                    <h3>What's provided?</h3>
+                    <p>Ionic Client provides a set of useful commands and makes it easy to start, build, run and emulate Ionic apps.</p>
+                    <p>Current version: 1.5.5</p>
+                    <p>Install it globally via NPM:</p>
+                    <pre>
+                        <code data-trim class="code-block">
+# npm install -g ionic
+                        </code>
+                    </pre>
+                </section>
+
+                <section>
+                    <h3>Features</h3>
+                    <p>Use it during development to avoid boilerplates and to setup the environment:</p>
+                    <pre>
+                        <code data-trim class="code-block">
+$ ionic start mySuperApp tabs
+$ ionic serve
+                        </code>
+                    </pre>
+                    <p>Use it to mobile support:</p>
+                    <pre>
+                        <code data-trim class="code-block">
+$ ionic platform add android
+$ ionic build android
+$ ionic emulate android
+                        </code>
+                    </pre>
                 </section>
 
                 <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="50% 100%">
                     <h3>Getting started</h3>
                     <p>Try it out!</p>
                     <pre><code data-trim contenteditable style="font-size: 18px; margin-top: 20px;">
-                        $ sudo npm install -g cordova ionic
-                        $ ionic start myAwesomeApp tabs
-                        $ cd myAwesomeApp
-                        $ ionic platform add android
-                        $ ionic build android
-                        $ ionic emulate android
+$ sudo npm install -g cordova ionic
+$ ionic start myAwesomeApp tabs
+$ cd myAwesomeApp
+$ ionic setup sass
+$ ionic serve
+$ ionic platform add android
+$ ionic build android
+$ ionic emulate android
                     </code></pre>
+                </section>
+            </section>
+
+            <section>
+                <section>
+                    <h1>ngCordova</h1>
+                    <img src="images/ngcordova.png" class="img-clear"/>
+                </section>
+
+                <section>
+                    <h3>Working with the OS</h3>
+                    <p>
+                        ngCordova is a collection of 63+ AngularJS extensions on top of the Cordova API that make it easy to build, test, and deploy Cordova mobile apps with AngularJS.
+                    </p>
+                </section>
+
+                <section>
+                    <h3>Available plugins</h3>
+                    <p>Following a list of available plugins:</p>
+                    <ul>
+                        <li class="fragment">Camera</li>
+                        <li class="fragment">Contacts</li>
+                        <li class="fragment">Geolocation</li>
+                        <li class="fragment">Preferences</li>
+                        <li class="fragment">Push Notifications</li>
+                    </ul>
+                    <p class="fragment"></i><a href="http://ngcordova.com/docs/plugins/"><i>http://ngcordova.com/docs/plugins/</i></a></p>
+                </section>
+
+                <section>
+                    <h3>Getting started</h3>
+                    <p>Install it via bower:</p>
+                    <pre>
+                        <code data-trim class="code-block">
+$ bower install ngCordova
+                        </code>
+                    </pre>
+                    <p>Include it in your index.html:</p>
+                    <pre>
+                        <code data-trim class="code-block">
+<script src="bower_components/ngcordova/dist/ng-cordova.js"></script>
+                        </code>
+                    </pre>
+                    <p>Then, use it in your application:</p>
+                    <pre>
+                        <code data-trim class="code-block">
+angular.module('mySuperApp', ['ionic', 'ngCordova']);
+    .controller('aCtrl', ['$ionicPlatform', '$cordovaCamera', function ($ionicPlatform, $cordovaCamera) {
+        $ionicPlatform.ready(function () {
+            $cordovaCamera.getPicture(options).then(function(imageData) {
+                var image = document.getElementById('myImage');
+                image.src = "data:image/jpeg;base64," + imageData;
+            });
+        });
+    }]);
+                        </code>
+                    </pre>
                 </section>
             </section>
 
@@ -1313,13 +1399,6 @@ angular.module('app', ['ionic'])
                 <p style="margin-top: 25px;"><small><em><a href="http://thecodinglove.com/search/404">thecodinglove.com</a></em></small></p>
             </section>
 
-            <section data-background="images/bg-black.png" data-background-size="auto 25%" data-background-repeat="no-repeat" data-background-position="50% 100%">
-                <h1>Credits</h1>
-                <ul>
-                    <li><a href="http://alicialiu.net/leveling-up-angular-talk">http://alicialiu.net/leveling-up-angular-talk</a></li>
-                    <li><a href="http://thecondiglove.com/">thecondiglove.com</a></li>
-                </ul>
-            </section>
 			</div>
 
 		</div>
