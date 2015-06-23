@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="../bower_components/ionic/release/css/ionic.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/iframe.css"/>
+    <script src="../bower_components/ionic/release/js/ionic.bundle.min.js"></script>
+    <script>
+        angular.module('app', ['ionic'])
+                .controller('ctrl', ['$scope', '$ionicPopup', function ($scope, $ionicPopup) {
+                    $scope.showPopup = function() {
+                        $scope.data = {};
+
+                        // An elaborate, custom popup
+                        var myPopup = $ionicPopup.show({
+                            template: '<input type="password" ng-model="data.wifi">',
+                            title: 'Enter Wi-Fi Password',
+                            subTitle: 'Please use normal things',
+                            scope: $scope,
+                            buttons: [
+                                { text: 'Cancel' },
+                                {
+                                    text: '<b>Save</b>',
+                                    type: 'button-positive',
+                                    onTap: function(e) {
+                                        if (!$scope.data.wifi) {
+                                            //don't allow the user to close unless he enters wifi password
+                                            e.preventDefault();
+                                        } else {
+                                            return $scope.data.wifi;
+                                        }
+                                    }
+                                }
+                            ]
+                        });
+                        myPopup.then(function(res) {
+                            console.log('Tapped!', res);
+                        });
+                    };
+                    // A confirm dialog
+                    $scope.showConfirm = function() {
+                        var confirmPopup = $ionicPopup.confirm({
+                            title: 'Consume Ice Cream',
+                            template: 'Are you sure you want to eat this ice cream?'
+                        });
+                        confirmPopup.then(function(res) {
+                            if(res) {
+                                console.log('You are sure');
+                            } else {
+                                console.log('You are not sure');
+                            }
+                        });
+                    };
+
+                    // An alert dialog
+                    $scope.showAlert = function() {
+                        var alertPopup = $ionicPopup.alert({
+                            title: 'Don\'t eat that!',
+                            template: 'It might taste good'
+                        });
+                        alertPopup.then(function(res) {
+                            console.log('Thank you for not eating my delicious ice cream cone');
+                        });
+                    };
+                }]);
+    </script>
+</head>
+<body ng-app="app">
+<div class="ionic-container-live">
+    <img src="../images/iphone.png" class="img-clear iphone-cover"/>
+    <div class="ionic-buttons-container" ng-controller="ctrl">
+        <button class="button button-dark" ng-click="showPopup()">
+            show
+        </button>
+        <button class="button button-primary" ng-click="showConfirm()">
+            Confirm
+        </button>
+        <button class="button button-positive" ng-click="showAlert()">
+            Alert
+        </button>
+    </div>
+</div>
+</body>
+</html>

@@ -1,0 +1,130 @@
+.textInput.ng-invalid {
+    color: white;
+    background: red;
+}
+
+.code-block {
+    font-size: 18px !important;
+    margin-top: 20px !important;
+}
+
+.hot-word {
+    color: #13daec;
+    text-decoration: none;
+}
+
+.ionic-container-live {
+    float: left;
+    height: 640px;
+    width: 32%;
+}
+
+.ionic-container-example {
+    float: left;
+    width: 68%;
+}
+
+.ionic-buttons-container {
+    padding: 0 15px !important;
+    padding-top: 90px !important;
+}
+
+.img-clear {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+.iphone-cover {
+    position: absolute;
+    height: 640px;
+    left: 68%;
+    width: 32%;
+}
+
+iframe.ionic-iframe {
+    width:32%;
+    height: 640px;
+    float:left;
+}
+
+/* Force Ionic CSS */
+.item-icon-left {
+    padding-left: 54px !important;
+}
+
+.item {
+    border-color: #ddd !important;
+    background-color: #fff !important;
+    color: #444 !important;
+    position: relative !important;
+    z-index: 2 !important;
+    display: block !important;
+    margin: -1px !important;
+    padding: 5px !important;
+    text-align: left !important;
+    padding-left: 51px !important;
+    border-width: 1px !important;
+    border-style: solid !important;
+    font-size: 16px !important;
+}
+
+.item-divider {
+    padding-top: 0 !important;
+    padding-bottom: 0 !important;
+    min-height: 30px !important;
+    background-color: #f5f5f5 !important;
+    color: #222 !important;
+    font-weight: 500 !important;
+    text-align: left !important;
+    padding-left: 12px !important;
+}
+
+.item-note {
+    float: right !important;
+    color: #aaa !important;
+    font-size: 14px !important;
+    margin-right: 10px !important;
+}
+
+.badge {
+    background-color: transparent !important;
+    color: #AAA !important;
+    z-index: 1 !important;
+    display: inline-block !important;
+    padding: 3px 8px !important;
+    min-width: 10px !important;
+    border-radius: 10px !important;
+    vertical-align: baseline !important;
+    text-align: center !important;
+    white-space: nowrap !important;
+    font-weight: 700 !important;
+    font-size: 14px !important;
+    line-height: 16px !important;
+}
+
+.badge.badge-assertive {
+    background-color: #ef473a !important;
+    color: #fff !important;
+}
+
+.card {
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    box-shadow: 0 1px 3px rgba(0,0,0,.3) !important;
+}
+
+.card, .list-inset {
+    overflow: hidden !important;
+    margin: 20px 10px !important;
+    border-radius: 2px !important;
+    background-color: #fff !important;
+}
+
+.list {
+    position: relative !important;
+    padding-top: 1px !important;
+    padding-bottom: 1px !important;
+    padding-left: 0 !important;
+    margin-bottom: 20px !important;
+}
