@@ -1,0 +1,19 @@
+{
+  "name": "AngularJS-Ionic-Amsterdam",
+  "version": "0.0.0",
+  "homepage": "https://github.com/wilk/AngularJS-Ionic-Amsterdam",
+  "authors": [
+    "Vincenzo (Wilk) Ferrari <wilk3ert@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ionic": "~1.0.0"
+  }
+}
