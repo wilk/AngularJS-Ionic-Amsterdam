@@ -28,5 +28,5 @@ node_modules
 .idea
 dist
 build
-bower_components
+#bower_components
 *.pdf
